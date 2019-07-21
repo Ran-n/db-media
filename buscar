@@ -1,0 +1,9 @@
+#! /bin/bash
+#+ Autor:	Ran#
+#+ Creado:	27/05/2019
+#+ Editado:	04/06/2019
+
+echo -e "\n  Localización\t< Nome"
+echo "| --------------------------------------------------- |"
+grep -iw "$1" db/catalogo.csv | awk -F";" '{print "  "$1" < "$2}' | sed "s/,/|/"
+echo "| --------------------------------------------------- |"

@@ -1,0 +1,6 @@
+#! /bin/bash
+#+ Autor:	Ran#
+#+ Creado:	06/06/2019 19:16:47
+#+ Editado:	06/06/2019 19:16:47
+
+vim db/catalogo.csv

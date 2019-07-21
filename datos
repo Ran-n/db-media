@@ -1,0 +1,14 @@
+#! /bin/bash
+#+ Autor:	Ran#
+#+ Creado:	05/06/2019
+#+ Editado:	07/06/2019 22:22:27
+
+result=$(grep -iw "$1" db/catalogo.csv | cut -d";" -f2 | cut -d"," -f1)
+
+if [ $(echo "$result" | wc -l) -gt 1 ]
+then
+	echo 'Se máis preciso'
+	exit 0
+else
+	vim "db/$result" 
+fi

@@ -1,0 +1,36 @@
+#1 Scripts:
+% buscar
+Atopa a localización do audiovisual seleccionado dada x información.
+
+#facendo primeiro awk vai máis rapido
+#esto é máis lento ca un awk directo
+#cut -d";" -f1,2 catalogo | sed 's/;/ < /'
+#esta versión máis rápida ca poñer o grep antes ou a anterior poñendo o grep antes ou despois
+#awk -F";" '{print $1" < "$2}' catalogo.csv | grep -i "$1" | sed "s/,/|/"
+#de todas formas a do grep antes para atopar por siglas
+
+% datos
+Ponte en editor vim para un ficheiro dun material audivisual, se existe co que tiña se non créacho.
+
+#2 Campos catálogo.csv:
+Campos separados por ;
+Subcampos separados por ,
+Lugar de almacenamento | Nome ou título do recurso | Siglas | Rematado? | Xéneros | audios | subs
+
+
+
+#3 Interpretar Ficheiros de Info de Series:
+"número: algo"	> Número refírese ó número da tempada e, algo, ao contido que temos de devandita tempada.  
+"+ algo info"	> Debaixo dunha tempada, indica que temos un episodio extra de posición algo e contido info.
+".."		> Debaixo dunha tempada indican os seus atributos propios. Debaixo de todas indica os atributos de tódalas tempadas. 
+"calidade:"	> Lista de calidades nas que temos os arquivos.
+"audio:"	> Lista de audios nas que temos os arquivos.
+"subs:"		> Lista de subs que temos dos arquivos.
+
+
+#4 Interpretar Ficheiros de Info de Pelis:
+
+
+#5 Interpretar Ficheiros de Info de Música:
+Nome da canción:
+FormatoA,FormatoB
